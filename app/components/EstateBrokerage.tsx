@@ -60,7 +60,7 @@ const EstateBrokerage = () => {
             </div>
             <div className="text-center">
               <p className="text-2xl lg:text-5xl  font-bold text-primary">
-                <CountUp start={0} end={10} duration={2.5} separator="," />+
+                <CountUp start={0} end={16} duration={2.5} separator="," />+
               </p>
               <p className="text-gray-700 text-sm md:text-base mt-2">
                 Experience
