@@ -12,31 +12,32 @@ import "swiper/css/navigation";
 const testimonialData: TestimonialData[] = [
   {
     id: 1,
-    quote: "The perfect place for our shop in town.",
+    quote: "The perfect place in Midtown Dubai.",
     description:
-      "I needed a shop in a busy area for my business, and Samchukwu Properties helped me find the perfect spot. The process was smooth, and I’m happy with the location. Customers are coming in every day now!",
-    authorName: "Chiamaka Nwosu",
+      "I recently purchased an apartment in Midtown Dubai, and Imran assisted me with the process. He helped me secure a mortgage and guided me through the documentation, which can often be complicated.",
+    authorName: "Farman Kaziakhmedov",
   },
+
   {
     id: 2,
-    quote: "Our family now owns land we can build on.",
+    quote: "A fantastic experience working together",
     description:
-      "Samchukwu Properties made it so easy for my family to buy land in a peaceful area. They explained everything well, and now we have a place we can call ours. Thank you for making our dream come true!",
-    authorName: "Ifeanyi Okafor",
+      "Working with Imran was a fantastic experience. His professionalism, expertise, and dedication to the clients make him stand out in the real estate industry. I would highly recommend Imran to anyone looking to buy, sell and rent a property. His exceptional service and commitment to excellence ensure that you are in good hands throughout the entire process.",
+    authorName: "Anwar Sadath",
   },
   {
     id: 3,
-    quote: "A good place for our dream home.",
+    quote: "Great customer service.",
     description:
-      "We’ve been looking for land to start building our dream home, and Samchukwu Properties didn’t disappoint. The land is in a good location, and their team made sure everything was done properly. We’re so happy!",
-    authorName: "Ngozi Eze",
+      "I have been dealing with Mr. Imran last 6 years now and has been constantly supportive from day one till date. If there is any matter related to the property, he extends an helping hand, great sense of responsibility and he make sure all goes smoothly. He has also shown a very reliable and customer oriented approach every time we had to renew our contract.",
+    authorName: "Sajeesh Pilat",
   },
   {
     id: 4,
-    quote: "This apartment feels like home.",
+    quote: "The experience with Smart Folks team.",
     description:
-      "Renting an apartment through Samchukwu Properties was a stress-free experience. The house is clean, secure, and in a good neighborhood. I’m grateful for their help in finding a comfortable place to live.",
-    authorName: "Chibuzo Nnadi",
+      "The experience with Smart Folks team and specially with Mr. Imran has been exceptional. He brings with him vast market experience and knowledge. He helps you in identifying the market and tailors the offerings as per your needs. He guided us with the right market entry point, location and time. I would recommend the team to anyone, the level of support.",
+    authorName: "Umair Ul Haq",
   },
 ];
 

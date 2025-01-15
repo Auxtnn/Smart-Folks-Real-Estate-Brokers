@@ -28,7 +28,7 @@ const BlogPage: React.FC<BlogPageProps> = ({ posts }) => {
   };
 
   return (
-    <section className="max-w-screen-xl bg-neutral-100 md:py-10 py-10">
+    <section className="max-w-screen-xl  md:py-10 py-10">
       <div className="mx-auto lg:w-11/12">
         <div className="flex px-5 gap-6 justify-between md:flex-row flex-col mx-auto">
           <h1 className="text-2xl lg:text-4xl font-bold text-gray-800">

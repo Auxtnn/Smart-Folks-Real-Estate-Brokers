@@ -6,7 +6,12 @@ import Image from "next/image";
 import { BiMenu } from "react-icons/bi";
 import { FaTimes } from "react-icons/fa";
 import { BsChevronBarRight } from "react-icons/bs";
-import { FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaYoutube,
+  FaLinkedin,
+} from "react-icons/fa";
 import { motion } from "framer-motion";
 
 const Navbar = () => {
@@ -75,7 +80,7 @@ const Navbar = () => {
             <Link href="/">
               <Image
                 alt="logo"
-                src="/assets/bg.png"
+                src="/assets/logo1.jpg"
                 width={50}
                 height={50}
                 className="rounded-full"
@@ -86,7 +91,7 @@ const Navbar = () => {
 
           <div className="flex space-x-4">
             <a
-              href="https://www.facebook.com/profile.php?id=100082877305169&mibextid=ZbWKwL"
+              href="https://web.facebook.com/profile.php?id=100076638170021"
               target="_blank"
               rel="noopener noreferrer"
               className="text-primary hover:text-primary transition-colors duration-300"
@@ -95,7 +100,7 @@ const Navbar = () => {
             </a>
 
             <a
-              href="https://www.instagram.com/chukwunonsoagbom?igsh=MWRsMG8wc2NvdTQ3ZA=="
+              href="https://www.instagram.com/smartfolks.realtors/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-primary hover:text-primary transition-colors duration-300"
@@ -103,12 +108,12 @@ const Navbar = () => {
               <FaInstagram />
             </a>
             <a
-              href="https://youtube.com/@samchukwuproperties?si=5EnCJvTCAGcFVr5K"
+              href="https://www.linkedin.com/company/smart-folks-real-estate-brokers?originalSubdomain=ae"
               target="_blank"
               rel="noopener noreferrer"
               className="text-primary hover:text-primary transition-colors duration-300"
             >
-              <FaYoutube />
+              <FaLinkedin />
             </a>
           </div>
 
@@ -128,7 +133,7 @@ const Navbar = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-primary text-white border px-8 py-4 rounded-full border-primary hover:bg-white hover:text-black transition-all font-semibold"
+                className="bg-primary text-white border px-6 py-3 rounded border-primary hover:bg-white hover:text-black transition-all font-normal"
               >
                 Contact Us
               </motion.button>
@@ -185,7 +190,7 @@ const Navbar = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-primary text-white mt-6  border px-8 py-4 rounded-full border-primary hover:bg-white hover:text-black transition-all font-semibold"
+                className="bg-primary text-white mt-6  border px-6 py-3 rounded-full border-primary hover:bg-white hover:text-black transition-all font-normal"
               >
                 Contact Us
               </motion.button>

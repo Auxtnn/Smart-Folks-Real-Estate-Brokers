@@ -9,11 +9,10 @@ import WhatWeDoSection from "./components/WhyChooseUs";
 import { TestimonialSection } from "./components/Testimonial";
 import BlogPage from "./components/BlogHome";
 import { getPosts } from "@/sanity/lib/query";
-import { getProperties } from "@/sanity/lib/query";
 
 export default async function Home() {
   const posts = (await getPosts("post")) || [];
-  const properties = (await getProperties("property")) || [];
+
   return (
     <main>
       <div className="">
@@ -26,7 +25,7 @@ export default async function Home() {
         <TestimonialSection />
         {/* <PropertyListing /> */}
 
-        <Projects properties={properties} />
+        <Projects />
 
         <BlogPage posts={posts} />
 

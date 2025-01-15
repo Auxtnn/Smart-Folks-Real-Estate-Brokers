@@ -58,10 +58,10 @@ const WhatWeDoSection: React.FC = () => {
                 Why Choose US
               </h2>
               <p className="text-gray-600 text-lg lg:text-base leading-relaxed mb-4">
-                At Samchukwu Properties, we prioritize your comfort, security,
-                and satisfaction. Our properties are strategically located,
-                competitively priced, and designed with modern amenities to fit
-                your lifestyle.
+                At Smart Folks Real Estate Brokers, we prioritize your comfort,
+                security, and satisfaction. Our properties are strategically
+                located, competitively priced, and designed with modern
+                amenities to fit your lifestyle.
               </p>
               <div className="flex flex-col space-y-8">
                 {services.map((service, index) => (

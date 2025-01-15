@@ -11,38 +11,20 @@ const HeroSection = () => {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.6,
-      },
-    },
-  };
-
-  const fadeInFromLeft = {
-    hidden: { opacity: 0, x: -50 },
-    visible: {
-      opacity: 1,
-      x: 0,
-      transition: {
-        duration: 0.6,
-      },
-    },
-  };
-
-  const imageAnimation = {
-    hidden: { opacity: 0, scale: 0.8 },
-    visible: {
-      opacity: 1,
-      scale: 1,
-      transition: {
         duration: 0.8,
         ease: "easeOut",
       },
     },
   };
 
-  const staggerChildren = {
+  const slideIn = {
+    hidden: { opacity: 0, x: -30 },
     visible: {
+      opacity: 1,
+      x: 0,
       transition: {
-        staggerChildren: 0.2,
+        duration: 0.8,
+        ease: "easeOut",
       },
     },
   };
@@ -51,78 +33,111 @@ const HeroSection = () => {
     <motion.section
       initial="hidden"
       animate="visible"
-      variants={staggerChildren}
-      className="w-full px-4 py-8 md:py-0 bg-gradient-to-r from-[#C1DEE8] to-[#ededed]"
+      className="relative w-full min-h-screen bg-neutral-50 pt-16"
     >
-      <div className="lg:w-11/12 mx-auto pt-20 pb-10">
-        <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-8">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 bg-[url('/assets/pattern.png')] opacity-5" />
+
+      <div className="relative lg:w-11/12 mx-auto px-4 pt-24 pb-16">
+        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
           {/* Content Section */}
-          <motion.div
-            variants={staggerChildren}
-            className="w-full md:w-1/2 space-y-6 text-center md:text-left"
-          >
-            <div className="space-y-4">
-              <motion.span
-                variants={fadeInFromLeft}
-                className="inline-block text-gray-800 text-xl font-medium"
-              >
-                Welcome to Samchukwu Properties
-              </motion.span>
+          <motion.div variants={slideIn} className="w-full lg:w-1/2 space-y-8">
+            <div className="space-y-6">
+              <motion.div variants={fadeIn} className="flex items-center gap-2">
+                <div className="h-0.5 w-8 bg-[#b99867]" />
+                <span className="text-[#b99867] font-medium tracking-wider uppercase text-sm">
+                  Premium Real Estate
+                </span>
+              </motion.div>
 
               <motion.h1
-                variants={fadeInFromLeft}
-                className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight"
+                variants={fadeIn}
+                className="text-4xl md:text-5xl xl:text-6xl font-bold text-gray-900 leading-tight"
               >
-                Find Your Dream Home
+                Discover Luxury <br />
+                <span className="text-[#b99867]">Dubai Properties</span>
               </motion.h1>
 
               <motion.p
-                variants={fadeInFromLeft}
-                className="text-gray-600 md:max-w-lg"
+                variants={fadeIn}
+                className="text-gray-600 text-lg max-w-xl leading-relaxed"
               >
-                Discover the perfect property tailored to your needs. Whether
-                you're buying, renting, or investing, we make it effortless.
+                Experience unparalleled luxury in Dubai's most prestigious
+                locations. From waterfront villas to sky-high penthouses, find
+                your perfect investment opportunity.
               </motion.p>
             </div>
 
-            {/* CTA Buttons */}
             <motion.div
               variants={fadeIn}
-              className="flex gap-4 pt-4 md:justify-start justify-center md:items-start items-center"
+              className="flex flex-col sm:flex-row gap-4 pt-4"
             >
-              <Link href="/listings">
+              <Link href="/listing">
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="px-5 py-4 rounded-full bg-black text-white font-medium hover:bg-black/90 transition-all focus:outline-none focus:ring-2 focus:ring-black/20"
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  className="px-8 py-4 bg-[#b99867] text-white rounded-lg font-medium hover:bg-[#a88756] transition-all shadow-lg shadow-[#b99867]/20"
                 >
-                  Explore Listings
+                  Explore Properties
                 </motion.button>
               </Link>
 
               <Link href="/contact">
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="bg-primary border px-8 py-4 rounded-full border-primary hover:bg-white hover:text-black transition-all font-semibold"
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  className="px-8 py-4 border-2 border-[#b99867] text-[#b99867] rounded-lg font-medium hover:bg-[#b99867] hover:text-white transition-all"
                 >
-                  Contact Us
+                  Schedule Viewing
                 </motion.button>
               </Link>
             </motion.div>
           </motion.div>
 
           {/* Image Section */}
-          <motion.div variants={imageAnimation} className="w-full md:w-1/2">
-            <div className="relative aspect-[4/3] md:aspect-square w-full max-w-xl mx-auto">
+          <motion.div variants={fadeIn} className="w-full lg:w-1/2">
+            <div className="relative aspect-[4/3] w-full">
               <Image
-                src="/assets/Img-1.png"
-                alt="Luxury Property"
+                src="/assets/2.jpg"
+                alt="Luxury Dubai Property"
                 fill
-                className="object-cover rounded-2xl"
-                sizes="(max-width: 768px) 100vw, 50vw"
+                className="object-cover rounded-xl shadow-2xl"
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 priority
               />
+              {/* Floating Card */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.5, duration: 0.8 }}
+                className="absolute -bottom-6 md:-left-6 bg-white p-6 rounded-lg shadow-xl max-w-xs"
+              >
+                <div className="flex items-center gap-4">
+                  <div className="p-3 bg-[#b99867]/10 rounded-full">
+                    <svg
+                      className="w-6 h-6 text-[#b99867]"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <div className="text-sm text-gray-600">
+                      Featured Property
+                    </div>
+                    <div className="font-semibold text-gray-900">
+                      MAG Eye Villas
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
             </div>
           </motion.div>
         </div>

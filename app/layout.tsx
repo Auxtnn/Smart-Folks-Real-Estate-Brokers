@@ -8,9 +8,9 @@ import ToastProvider from "./components/ToastProvider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Samchukwu Properties",
+  title: "Smart Folks Real Estate Brokers",
   description:
-    "Find your ideal property with Samchukwu Properties. We offer prime land for sale and affordable apartment rentals. Start your property journey with us today.",
+    "Property Management Company in UAE, Dubai, United Arab Emirates.",
 };
 
 export default function RootLayout({

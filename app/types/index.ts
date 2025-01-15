@@ -104,6 +104,27 @@ export type propertyDetailsType = {
   location: {
     address: string;
     city: string;
+    coordinates: string;
   };
   features: string[];
 };
+
+export interface PropertyLocation {
+  category: string;
+  city: string;
+  address: string;
+}
+
+export interface Property {
+  currentSlug: string;
+  title: string;
+  location: PropertyLocation;
+  price: number;
+  priceUnit: string;
+  status: "sale" | "rent" | "lease";
+  images: PropertyImage[];
+  details: PropertyDetails;
+  description: Array<{ children: Array<{ text: string }> }>;
+  features: string[];
+  image: string;
+}

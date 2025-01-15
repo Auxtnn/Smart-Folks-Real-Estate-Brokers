@@ -1,6 +1,7 @@
 // components/PropertyImageCarousel.tsx
 "use client";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { useEffect, useState } from "react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import Image from "next/image";
 import type { PropertyImage } from "../types";
@@ -44,18 +45,9 @@ export const AgentContact = () => {
   return (
     <div className="bg-white p-6 rounded-lg shadow-md">
       <div className="flex items-center space-x-4 mb-4">
-        <Image
-          src="/assets/sam.jpg"
-          alt="agent picture"
-          width={60}
-          height={60}
-          className="rounded-full"
-        />
         <div>
-          <h3 className="text-xl font-semibold text-gray-800">
-            Samchukwu Properties
-          </h3>
-          <p className="text-gray-600">Real Estate Agent</p>
+          <h3 className="text-xl font-semibold text-gray-800">Smart Folks </h3>
+          <p className="text-gray-600">Real Estate Brokers</p>
         </div>
       </div>
       <div className="space-y-3">
@@ -63,21 +55,25 @@ export const AgentContact = () => {
           className="w-full bg-primary text-white py-3 rounded-md hover:bg-primary/80 transition-colors duration-300"
           onClick={() => (window.location.href = "/contact")}
         >
-          Contact Agent
+          Contact Us
         </button>
         <a
-          href="tel:+2347035214886"
+          href="tel:+971509106300"
           className="block w-full text-center bg-gray-800 text-white py-3 rounded-md hover:bg-gray-700 transition-colors duration-300"
         >
-          Call 07035214886
+          Call +971 50 910 6300
         </a>
         <a
-          href="mailto:samchukwuproperties@gmail.com"
+          href="mailto:smartfolks.realtors@gmail.com"
           className="block w-full text-center border border-gray-300 py-3 rounded-md hover:bg-gray-50 transition-colors duration-300"
         >
-          Email Agent
+          Email Us
         </a>
       </div>
     </div>
   );
 };
+
+interface PropertyMapProps {
+  address: string;
+}

@@ -144,7 +144,7 @@ body {
 
 ::-webkit-scrollbar-thumb {
   border-radius: 1rem;
-  background: linear-gradient(135deg, #2596be 86%, #ededed 12%);
+  background: linear-gradient(135deg, #b99867 86%, #ededed 12%);
   transition: all 0.5s ease-in-out;
 }
 
