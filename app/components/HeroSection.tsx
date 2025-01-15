@@ -72,7 +72,7 @@ const HeroSection = () => {
               variants={fadeIn}
               className="flex flex-col sm:flex-row gap-4 pt-4"
             >
-              <Link href="/listing">
+              <Link href="/listings">
                 <motion.button
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
